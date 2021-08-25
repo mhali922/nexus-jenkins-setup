@@ -29,6 +29,7 @@ pipeline {
             }
             }
         }
+        /**
         stage('Upload War To Nexus'){
             steps{
                 script{
@@ -52,6 +53,6 @@ pipeline {
                     version: "${mavenPom.version}"
                     }
             }
-        }
+        } **/
     }
 }
