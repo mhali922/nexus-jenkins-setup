@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                                                                 
-                    sh "git clone https://github.com/mhali922/nexus-jenkins-setup.git"
+                    sh "git clone https://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@github.com/mhali922/nexus-jenkins-setup.git"
                    
 }
 }
