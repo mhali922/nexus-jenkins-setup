@@ -1,3 +1,5 @@
+    On Linux EC2 - 
+    
     7  sudo wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
     8  ls -l
     9  sudo tar -xf latest-unix.tar.gz
