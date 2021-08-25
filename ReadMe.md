@@ -1,3 +1,5 @@
+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 - TOKEN
+
 If there is an error like -- Error: Package: jenkins-2.307-1.1.noarch (jenkins)
 Run below two commands to resolve the above ERROR
 1- amazon-linux-extras install epel -y
