@@ -23,7 +23,7 @@ pipeline {
             stage('Build'){
             steps{
                 script{
-                 sh "cp -rp $workspace/simple-app/* $workspace";
+                 sh "cp -rp $workspace/nexus-jenkins-setup/* $workspace";
                  sh "mvn clean package";
                  archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
             }
