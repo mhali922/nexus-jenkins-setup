@@ -15,7 +15,9 @@ pipeline {
             steps {
                 script {
                                                                 
-                    sh "git clone https://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@github.com/mhali922/nexus-jenkins-setup.git"
+
+                    sh "git clone https://github.com/mhali922/simple-app.git"
+
                    
 }
 }
@@ -23,12 +25,15 @@ pipeline {
             stage('Build'){
             steps{
                 script{
-                 
+
+                 sh "cp -rp $workspace/simple-app/* $workspace";
+
                  sh "mvn clean package";
                  archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
             }
             }
-        }
+            }
+
         stage('Upload War To Nexus'){
             steps{
                 script{
@@ -51,7 +56,8 @@ pipeline {
                     repository: nexusRepoName, 
                     version: "${mavenPom.version}"
                     }
-            }
-        }
+                    }
+                    }
+
     }
 }
