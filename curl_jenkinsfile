@@ -34,7 +34,8 @@ pipeline {
         stage('Upload War To Nexus'){
             steps{
                 script {
-                  sh "curl -v -u admin:admin --upload-file target/simple-app-1.0.1.war http://172.31.23.232:8081/simpleapp-release/"
+             //     sh "curl -v -u admin:admin --upload-file target/simple-app-1.0.1.war http://172.31.23.232:8081/simpleapp-release/"
+	     mvn deploy:deploy-file -DgroupId=in.javahome -DartifactId=simple-app -Dversion=1.0.1 -DgeneratePom=true -Dpackaging=war -DrepositoryId=nexus3 -Durl=http://172.31.23.232:8081/repository/simpleapp-release -Dfile=target/simple-app-1.0.1.war
                     }
             }
 	}
