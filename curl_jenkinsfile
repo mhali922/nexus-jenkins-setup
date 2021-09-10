@@ -27,7 +27,7 @@ pipeline {
                 script{
                  sh "cp -rp $workspace/simple-app/* $workspace";
                  sh "mvn clean package";
-                 archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
+               //  archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
             }
             }
         }
